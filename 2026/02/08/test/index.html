@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords" content="" />
-  <meta name="author" content="John Doe" />
+  <meta name="author" content="wtx" />
   <meta name="description" content="" />
   
   
   <title>
     
-      archive_a: 2021/6 
+      测试文章 
       
       
     
@@ -33,6 +33,10 @@
 
 
   
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -94,53 +98,45 @@
 
 
       <div class="main">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2026</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="Hello World">
-        <div class="time-m-d">02-08</div>
-        <div class="title">
-          <a href="/2026/02/08/hello-world/">
-            
-              <span>Hello World</span>
-            
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2021</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="测试文章">
-        <div class="time-m-d">06-10</div>
-        <div class="title">
-          <a href="/2021/06/10/test/">
-            
-              <span>测试文章</span>
-            
-          </a>
-        </div>
-      </div>
-    
+<div class="post">
+  <h3 class="date">
+    Feb 08, 2026
+  </h3>
+  <h1>
+    测试文章
+  </h1>
+  <div class="content markdown-body">
+    <p>这是一篇测试文章</p>
+<h2 id="图片引用测试"><a href="#图片引用测试" class="headerlink" title="图片引用测试"></a>图片引用测试</h2><img src="/2026/02/08/test/test.png" class="" title="图片引用方法一"> 
+
+<p><img src="/test.png" alt="图片引用方法二"></p>
+<p><img src="/images/test.png" alt="图片引用方法三"></p>
+<p>实测只有第一种方法能用。</p>
+<h2 id="代码块测试"><a href="#代码块测试" class="headerlink" title="代码块测试"></a>代码块测试</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">test</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="数学公式测试"><a href="#数学公式测试" class="headerlink" title="数学公式测试"></a>数学公式测试</h2><p>$$E&#x3D;mc^2<br>$$</p>
+
   </div>
+  
+    
+        
+            
 </div>
-
         <div class="footer">
   
     <div class="footer-more">
