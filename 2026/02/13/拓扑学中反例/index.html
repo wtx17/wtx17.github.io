@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="余可数拓扑取全空间为 $\mathbb{R}$ ，开集 $\mathcal{T}$ 被指定为那些补集可数的子集以及空集。它不是第一可数空间，而我们知道，第一可数性质在序列的收敛方面非常重要，下面看看不具备这个性质的拓扑空间中，序列的收敛呈现何种样貌。 非第一可数的证明假设 $(\mathbb{R}, \mathcal{T})$ 第一可数，那么任取一点 $x\in \mathbb{R},$ 存在一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="拓扑学中反例">
+<meta property="og:url" content="http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/index.html">
+<meta property="og:site_name" content="wtx的博客">
+<meta property="og:description" content="余可数拓扑取全空间为 $\mathbb{R}$ ，开集 $\mathcal{T}$ 被指定为那些补集可数的子集以及空集。它不是第一可数空间，而我们知道，第一可数性质在序列的收敛方面非常重要，下面看看不具备这个性质的拓扑空间中，序列的收敛呈现何种样貌。 非第一可数的证明假设 $(\mathbb{R}, \mathcal{T})$ 第一可数，那么任取一点 $x\in \mathbb{R},$ 存在一个">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-02-13T05:16:38.000Z">
+<meta property="article:modified_time" content="2026-02-13T10:33:06.401Z">
+<meta property="article:author" content="wtx">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>拓扑学中反例</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+			tex2jax: {
+			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			  inlineMath: [['$','$']]
+			}
+		  });
+		</script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tag</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2026/02/20/%E6%98%A5%E8%8A%82%E8%B1%A1%E5%B1%B1%E5%B0%8F%E8%AE%B0/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2026/02/08/%E5%BA%8F/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&text=拓扑学中反例"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&is_video=false&description=拓扑学中反例"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=拓扑学中反例&body=Check out this article: http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&name=拓扑学中反例&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&t=拓扑学中反例"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%99%E5%8F%AF%E6%95%B0%E6%8B%93%E6%89%91"><span class="toc-number">1.</span> <span class="toc-text">余可数拓扑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E7%AC%AC%E4%B8%80%E5%8F%AF%E6%95%B0%E7%9A%84%E8%AF%81%E6%98%8E"><span class="toc-number">1.1.</span> <span class="toc-text">非第一可数的证明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E7%9A%84%E6%94%B6%E6%95%9B"><span class="toc-number">1.2.</span> <span class="toc-text">序列的收敛</span></a></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        拓扑学中反例
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">wtx</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-02-13T05:16:38.000Z" class="dt-published" itemprop="datePublished">2026-02-13</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag">数学</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="余可数拓扑"><a href="#余可数拓扑" class="headerlink" title="余可数拓扑"></a>余可数拓扑</h2><p>取全空间为 $\mathbb{R}$ ，开集 $\mathcal{T}$ 被指定为那些补集可数的子集以及空集。它不是第一可数空间，而我们知道，第一可数性质在序列的收敛方面非常重要，下面看看不具备这个性质的拓扑空间中，序列的收敛呈现何种样貌。</p>
+<h3 id="非第一可数的证明"><a href="#非第一可数的证明" class="headerlink" title="非第一可数的证明"></a>非第一可数的证明</h3><p>假设 $(\mathbb{R}, \mathcal{T})$ 第一可数，那么任取一点 $x\in \mathbb{R},$ 存在一个可数开邻域基 $\mathcal{B} &#x3D; {U_n,n\ge 1}$。 易见 $\bigcup_{n\ge 1}U_n^c &#x3D; \left( \bigcap_{n\ge 1}U_n \right)^c $ 可数，因此可取 $y\in \bigcap_{n\ge 1}U_n$ 且 $y\neq x$。 则 ${y}^c$ 是 $x$ 的一个开邻域，但 $\mathcal{B}$ 中取不出 $B_k\subseteq {y}^c$ ，矛盾。</p>
+<h3 id="序列的收敛"><a href="#序列的收敛" class="headerlink" title="序列的收敛"></a>序列的收敛</h3><p>我们知道，第一可数空间中，若 $x$ 是 $A$ 的一个聚点，则 $A\setminus {x}$ 中存在一个序列收敛于 $x$。 能取出这样的序列，是由可数邻域套基保证的。 但在余可数拓扑中，情况就完全不同了。因为在这个拓扑中，<strong>序列的收敛的充要条件是序列在某项后固定</strong>。下面证明必要性：</p>
+<p>设 ${x_n}_{n&#x3D;1}^\infty$ 是余可数拓扑中收敛于 $x$ 的一个序列。 假设其不终为 $x$，即对于任意 $N\in \mathbb{N}$，存在 $n\ge N$ 使得 $x_n\neq x$，即 $ A &#x3D; {k:x_k\neq x}$ 是一个无限集合。易见 $A^c$ 为开集，且 $x\in A^c$，故 $A\in \mathcal{N}(x)$。 然而对于 $A$,  并不存在 $N\in \mathbb{N}$ 使得 $n\ge N$ 时 $x_n\in A$，这与 ${x_n}$ 收敛于 $x$ 矛盾。</p>
+<blockquote>
+<p>就我而言，单单从「第一可数空间中必有收敛于聚点的序列」这个命题的证明出发，并不能看出，若是取消了第一可数性会发生怎样的灾难，只不过是不能那么直白地取出收敛于聚点的一列元素罢了。我隐隐还认为，有别的方法可以取出这样一列元素。但是显然这种方法不存在。上面的例子真是天外飞仙，从完全想不到的角度刷新了我的认知。</p>
+</blockquote>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="/tags/">Tag</a></li>
+        
+          <li><a href="/categories/">Category</a></li>
+        
+          <li><a href="/search/">Search</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%99%E5%8F%AF%E6%95%B0%E6%8B%93%E6%89%91"><span class="toc-number">1.</span> <span class="toc-text">余可数拓扑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E7%AC%AC%E4%B8%80%E5%8F%AF%E6%95%B0%E7%9A%84%E8%AF%81%E6%98%8E"><span class="toc-number">1.1.</span> <span class="toc-text">非第一可数的证明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E7%9A%84%E6%94%B6%E6%95%9B"><span class="toc-number">1.2.</span> <span class="toc-text">序列的收敛</span></a></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&text=拓扑学中反例"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&is_video=false&description=拓扑学中反例"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=拓扑学中反例&body=Check out this article: http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&title=拓扑学中反例"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&name=拓扑学中反例&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2026/02/13/%E6%8B%93%E6%89%91%E5%AD%A6%E4%B8%AD%E5%8F%8D%E4%BE%8B/&t=拓扑学中反例"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2026
+    wtx
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="/tags/">Tag</a></li><!--
+     --><!--
+       --><li><a href="/categories/">Category</a></li><!--
+     --><!--
+       --><li><a href="/search/">Search</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
